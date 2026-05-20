@@ -53,15 +53,14 @@ jobs:
           DB_TEST_NAME: quizapp_test
           DB_USER: postgres
           DB_PASSWORD: postgres
-        run: |
-          npm install -g pg
-          npx ts-node src/db/runMigrations.ts
+        run: npx ts-node src/db/runMigrations.ts
 
       - name: Seed test database
         working-directory: server
         env:
           DB_HOST: localhost
           DB_PORT: 5432
+          DB_NAME: quizapp_test
           DB_TEST_NAME: quizapp_test
           DB_USER: postgres
           DB_PASSWORD: postgres
@@ -72,10 +71,12 @@ jobs:
         env:
           DB_HOST: localhost
           DB_PORT: 5432
+          DB_NAME: quizapp_test
           DB_TEST_NAME: quizapp_test
           DB_USER: postgres
           DB_PASSWORD: postgres
           JWT_SECRET: test_secret_for_ci
+          NODE_ENV: test
         run: npm test
 
   typecheck-client:
