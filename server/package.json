@@ -7,6 +7,7 @@
     "dev": "nodemon",
     "build": "tsc",
     "migrate": "ts-node src/db/runMigrations.ts",
+    "seed": "ts-node src/db/runSeed.ts",
     "start": "node dist/index.js",
     "test": "jest --forceExit"
   },
