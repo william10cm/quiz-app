@@ -1,4 +1,4 @@
-CREATE TABLE topics (
+CREATE TABLE IF NOT EXISTS topics (
   id SERIAL PRIMARY KEY,
   name VARCHAR(100) UNIQUE NOT NULL,
   description TEXT

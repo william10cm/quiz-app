@@ -1,4 +1,4 @@
-CREATE TABLE quiz_attempts (
+CREATE TABLE IF NOT EXISTS quiz_attempts (
   id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
   user_id UUID REFERENCES users(id) ON DELETE CASCADE,
   topic_id INT REFERENCES topics(id),
