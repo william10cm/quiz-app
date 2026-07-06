@@ -17,7 +17,7 @@ const Navbar = () => {
         <Link to="/topics" className="navbar-brand">QuizApp</Link>
         {isAuthenticated && (
           <div className="navbar-right">
-            <span className="navbar-user">Hi, {user?.username}</span>
+            <span className="navbar-user">{user?.username}</span>
             <Link to="/dashboard" className="navbar-link">Dashboard</Link>
             <button onClick={handleLogout} className="navbar-logout">Logout</button>
           </div>

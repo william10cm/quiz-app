@@ -44,9 +44,9 @@ const ResultsPage = () => {
         ))}
       </div>
       <div className="results-actions">
-        <button className="btn-secondary" onClick={() => navigate('/topics')}>
+        {/* <button className="btn-secondary" onClick={() => navigate('/topics')}>
           Try another topic
-        </button>
+        // </button> */}
         <button className="btn-primary" onClick={() => navigate('/dashboard')}>
           View dashboard
         </button>
