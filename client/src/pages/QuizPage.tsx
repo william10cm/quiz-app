@@ -18,7 +18,6 @@ const QuizPage = () => {
   useEffect(() => {
     getQuestions(Number(topicId))
       .then((res) => setQuestions(res.data))
-      .catch(console.error)
       .finally(() => setLoading(false));
   }, [topicId]);
 
@@ -43,8 +42,8 @@ const QuizPage = () => {
       }));
       const res = await submitQuiz(Number(topicId), answers);
       navigate('/results', { state: { result: res.data } });
-    } catch (err) {
-      console.error(err);
+    } catch {
+      // submission failed
     } finally {
       setSubmitting(false);
     }

@@ -22,7 +22,6 @@ const DashboardPage = () => {
   useEffect(() => {
     getHistory()
       .then((res) => setHistory(res.data))
-      .catch(console.error)
       .finally(() => setLoading(false));
   }, []);
 

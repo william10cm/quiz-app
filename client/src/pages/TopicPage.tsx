@@ -17,7 +17,6 @@ const TopicPage = () => {
   useEffect(() => {
     getTopics()
       .then((res) => setTopics(res.data))
-      .catch(console.error)
       .finally(() => setLoading(false));
   }, []);
 
